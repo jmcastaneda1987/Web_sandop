@@ -9,9 +9,7 @@ class Reporte():
         self.data_rolling = pd.DataFrame()
         self.data_complementaria = pd.DataFrame()
         self.data_clientes = pd.DataFrame()
-        directorio_actual = os.path.dirname(os.path.abspath(__file__))
-        ruta_diccionario = os.path.join(directorio_actual, 'static', 'diccionario.csv')
-        self.data_diccionario = pd.read_csv(ruta_diccionario)
+        self.data_diccionario = pd.read_csv('static/diccionario.csv')
         self.resultado = pd.DataFrame()
 
     def calcular(self):
