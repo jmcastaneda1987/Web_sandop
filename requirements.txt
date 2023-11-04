@@ -1,0 +1,6 @@
+Bootstrap_Flask
+Flask
+pandas
+numpy
+Flask-WTF
+openpyxl
