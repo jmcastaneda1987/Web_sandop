@@ -4,3 +4,5 @@ pandas
 numpy
 Flask-WTF
 openpyxl
+gunicorn
+psycopg2
