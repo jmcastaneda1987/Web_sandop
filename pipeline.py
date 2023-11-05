@@ -9,7 +9,7 @@ class Reporte():
         self.data_rolling = pd.DataFrame()
         self.data_complementaria = pd.DataFrame()
         self.data_clientes = pd.DataFrame()
-        self.data_diccionario = pd.read_csv('diccionario.csv')
+        self.data_diccionario = pd.read_csv('https://planeacion-comercial-y-operaciones.onrender.com/diccionario.csv')
         self.resultado = pd.DataFrame()
 
     def calcular(self):
