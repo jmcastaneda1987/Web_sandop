@@ -7,6 +7,7 @@ from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
 from wtforms import FileField,SubmitField,SelectField
 from wtforms.validators import DataRequired
+import os
 
 
 app = Flask(__name__)
@@ -38,6 +39,8 @@ def home():
         final_report.data_complementaria = pd.read_excel(BytesIO(archivo_bytes),sheet_name='Hoja1')
         archivo_bytes = form.clientes_file.data.read()
         final_report.data_clientes = pd.read_excel(BytesIO(archivo_bytes),sheet_name='DATA')
+        ruta_diccionario = os.path.join(app.root_path, 'static', 'diccionario.csv')
+        final_report.data_diccionario = pd.read_csv(ruta_diccionario)
         return redirect(url_for("home"))
     if form1.submit1.data and form1.validate(): # notice the order
         final_report.mes_de_corte = int(form1.dropdown.data)
